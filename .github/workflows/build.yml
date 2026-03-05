@@ -49,8 +49,8 @@ jobs:
           git checkout -b release
           git add -A
           git commit -m "${{ env.NAME }}"
-          git remote add geoip "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}"
-          git push -f geoip release
+          git remote add geosite "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}"
+          git push -f geosite release
           
       - name: Создание релиза и загрузка файлов
         run: |
