@@ -1,5 +1,6 @@
 include:intel
 include:oppo
+include:microsoft
 
 qualcomm.com
 quectel.com
