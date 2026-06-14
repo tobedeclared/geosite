@@ -1,8 +1,9 @@
 include:intel
-include:oppo
 include:microsoft
+include:oppo
+include:orico
+
+asus.com
 
 qualcomm.com
 quectel.com
-
-asus.com
