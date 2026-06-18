@@ -3,7 +3,6 @@ on:
   push:
     branches:
       - master
-      
     paths-ignore:
       - "**/README.md"
       - ".gitignore"
@@ -18,7 +17,6 @@ jobs:
     name: GeoSite
     runs-on: ubuntu-latest
     steps:
-    
       - name: Клонирование кодовой базы из репозитория GitHub
         uses: actions/checkout@v6
         with:
@@ -31,9 +29,20 @@ jobs:
           cache-dependency-path: code/go.sum
 
       - name: Установка переменных окружения
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          echo "NAME=geosite-v$(date +%d.%m.%Y)" >> $GITHUB_ENV
-        shell: bash
+          DATE=$(date +'%y.%m.%d')
+      
+          LAST=$(gh release list --limit 100 \
+            | grep "geoip-${DATE}-r" \
+            | sed -E "s/.*geoip-${DATE}-r([0-9]+).*/\1/" \
+            | sort -n \
+            | tail -1)
+      
+          REV=$(( ${LAST:-0} + 1 ))
+      
+          echo "NAME=geosite-${DATE}-r${REV}" >> $GITHUB_ENV
 
       - name: Сборка файлов geosite
         run: |
