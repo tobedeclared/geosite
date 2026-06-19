@@ -35,8 +35,8 @@ jobs:
           DATE=$(date +'%y.%m.%d')
       
           LAST=$(gh release list --limit 100 \
-            | grep "geoip-${DATE}-r" \
-            | sed -E "s/.*geoip-${DATE}-r([0-9]+).*/\1/" \
+            | grep "geosite-${DATE}-r" \
+            | sed -E "s/.*geosite-${DATE}-r([0-9]+).*/\1/" \
             | sort -n \
             | tail -1)
       
