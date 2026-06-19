@@ -32,7 +32,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          DATE=$(date +'%y.%m.%d')
+          DATE=$(date +'%d.%m.%y')
       
           LAST=$(gh release list --limit 100 \
             | grep "geosite-${DATE}-r" \
