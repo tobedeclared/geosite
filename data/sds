@@ -18,7 +18,7 @@ include:pochta
 include:premier
 include:rustore
 include:rutube
-include:sber
+# include:sber - yota х
 include:vk
 include:wildberries
 include:yandex
