@@ -8,7 +8,7 @@ include:magnit
 include:mailru
 include:max
 include:megafon
-include:mir
+include:mirpay
 include:mts
 include:ok
 include:okko
@@ -18,8 +18,9 @@ include:pochta
 include:premier
 include:rustore
 include:rutube
-# include:sber - yota х
+include:sdek
 include:vk
+include:vkusno
 include:wildberries
 include:yandex
 include:yota
