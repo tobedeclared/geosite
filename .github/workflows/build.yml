@@ -41,8 +41,8 @@ jobs:
             | tail -1)
       
           REV=$(( ${LAST:-0} + 1 ))
-      
-          echo "NAME=geosite-${DATE}-r${REV}" >> $GITHUB_ENV
+
+          echo "NAME=geosite-${DATE}-${GITHUB_RUN_ID}" >> $GITHUB_ENV
 
       - name: Сборка файлов geosite
         run: |
