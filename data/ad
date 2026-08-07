@@ -1,8 +1,9 @@
+# https://github.com/notracking/hosts-blocklists/issues/655
 ad-cdek.ru
 ad.mail.ru
 adriver.ru
 ads.rustore.ru
 adsdk.yandex.ru
-androidtvchannels-pa.googleapis.com # https://github.com/notracking/hosts-blocklists/issues/655
-androidtvwatsonfe-pa.googleapis.com # https://github.com/notracking/hosts-blocklists/issues/655
+androidtvchannels-pa.googleapis.com
+androidtvwatsonfe-pa.googleapis.com
 buzzoola.com
